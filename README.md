@@ -172,7 +172,7 @@ ssh user@192.168.X.X
 <img src="https://imgur.com/Nb76Nfs.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<b>STEP 17</b> - "mainframe" Still Pinging From 10.0.0.4 IP Despite IP Address Change.
+<b>STEP 17</b> - Filtering For <B>SSH</B> Traffic.
 </p>
 <br />
 
@@ -181,7 +181,7 @@ ssh user@192.168.X.X
 <img src="https://imgur.com/8AEYEjz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<b>STEP 18</b> - "mainframe" Still Holds A (Host) 10.0.0.4 When Initiating "ping" Command.
+<b>STEP 18</b> - Initiating <b>SSH</b> Connection In Powershell.
 </p>
 <br />
 
@@ -189,7 +189,7 @@ ssh user@192.168.X.X
 <img src="https://imgur.com/xpu6Y3r.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<b>STEP 19</b> - Initiated "flushdns" Command To Get Rid of The Cache on DC-1 PC.
+<b>STEP 19</b> - Using Commands Such As <b>pwd</b> & <b>touch</b> to create a txt File Named <b>alo.txt</b>.
 </p>
 <br />
 
@@ -197,7 +197,7 @@ ssh user@192.168.X.X
 <img src="https://imgur.com/OTyq8Nb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<b>STEP 20</b> - The Ping Is Now Showing The New 8.8.8.8 IP Address.
+<b>STEP 20</b> - Terminating SSH Connection.
 </p>
 <br />
 
@@ -205,26 +205,26 @@ ssh user@192.168.X.X
 <img src="https://imgur.com/wBqA89H.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<b>STEP 21</b> - "nslookup" Results for search CNAME.
+<b>STEP 21</b> - Creating txt File With <b>/release</b> & <b>/renew</b> commands.
 </p>
 <br />
 
 <p> 
 <img src=https://imgur.com/30voGtd.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-<b>STEP 22</b> - Attempting To Ping "mainframe" on CLIENT 1 PC
+<b>STEP 22</b> - Saving <b>dhcp.bat</b> File.
 <p>
 <br />
 
 <p>
 <img src="https://imgur.com/perc2WQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-<b>STEP 23</b> - "nslookup" mainframe Attempt Fails on CLIENT 1 PC
+<b>STEP 23</b> - DCHP Traffic <b>DORA</b> Process Initiated & Displayed.
 <p>
 <br />
 
 <p>
-<img src="https://imgur.com/perc2WQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/duXq8Xm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 <b>STEP 24</b> - Switching To DC-1 PC To Create a DNS-A Record Named "mainframe" With DC-1's Private IP Address.
@@ -232,7 +232,7 @@ ssh user@192.168.X.X
 <br />
 
 <p>
-<img src="https://imgur.com/duXq8Xm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/faow4j8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 <b>STEP 25</b> - Pinged "mainframe" Succesfully on CLIENT 1 PC.
@@ -240,7 +240,7 @@ ssh user@192.168.X.X
 <br />
 
 <p>
-<img src="https://imgur.com/faow4j8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/egWjE8X.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 <b>STEP 26</b> - Changing "mainframe" IP Address To 8.8.8.8 ON DC-1 PC.
@@ -248,7 +248,7 @@ ssh user@192.168.X.X
 <br />
 
 <p>
-<img src="https://imgur.com/egWjE8X.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/TkPYyuw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 <b>STEP 27</b> - "mainframe" Still Pinging From 10.0.0.4 IP Despite IP Address Change.
