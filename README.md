@@ -3,13 +3,12 @@
 </p>
 
 <h1> Wireshark & Network Protocols</h1> </h1>
-This project explores network traffic behavior by capturing and analyzing DNS, DHCP, RDP, and SSH packets using Wireshark. The focus is on understanding how these protocols operate, troubleshooting network connectivity, and leveraging PowerShell for network administration. Additionally, it covers initiating an SSH connection to a Linux VM using its private IP address from a Windows machine. <br />
+This project explores network traffic behavior by capturing and analyzing <b>DNS, DHCP, RDP, and SSH</b> packets using Wireshark. The focus is on understanding how these protocols operate, troubleshooting network connectivity, and leveraging PowerShell for network administration. Additionally, it covers initiating an SSH connection to a Linux VM using its <b>private IP address</b> from a Windows machine. <br />
 
 
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Computer)
-    - "CLIENT 1" (User PC) & "DC-1" (Domain Controller PC)
 - Remote Desktop
 - Wireshark
 - Linux VM (Ubuntu/Debian-based) – For SSH testing.
@@ -18,29 +17,28 @@ This project explores network traffic behavior by capturing and analyzing DNS, D
 <h2>Operating Systems Used </h2>
 
 - Windows 10 (21H2)
+- Ubuntu Linux
 
 <h2>Key Observations</h2>
 
-- DNS Analysis
+- <b>DNS Analysis</b>
     - Captured and analyzed DNS queries and responses using Wireshark.
 
-- DHCP Packet Inspection
+- <b>DHCP Packet Inspection</b>
     - Observed the DORA (Discover, Offer, Request, Acknowledge) process for DHCP leases.
     - Monitored DHCP-assigned IP addresses and renewal times.
-    - Used Get-DhcpServerv4Scope in PowerShell to check DHCP scope settings.
-- RDP Traffic Analysis
+    
+- <b>RDP Traffic Analysis</b>
     - Captured Remote Desktop Protocol (RDP) traffic between a Windows client and a remote server.
 
-- Examined encryption methods in RDP traffic.
+- <b>Examined Encryption Methods in RDP Traffic</b>
     - SSH Connection & Private IP Usage
     - Initiated an SSH session from PowerShell to a Linux VM using its private IP address:
-ssh user@192.168.X.X
+      <b>ssh user@10.0.0.5</b>
 
-- Analyzed SSH handshake and encryption methods in Wireshark.
+- <b>Analyzed SSH handshake and encryption methods in Wireshark</b>
     - Captured ICMP, TCP, and UDP traffic for deeper insights.
     - Observed HTTP vs. HTTPS traffic to analyze encrypted vs. unencrypted data.
-    - Used Test-NetConnection and ping to check network connectivity.
-
 
 <h2>Actions and Observations</h2>
 
@@ -126,7 +124,7 @@ ssh user@192.168.X.X
 <img src="https://imgur.com/6fIPwAI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<b>STEP 11</b> - Retrieving Linux Ubuntu VM Private IP Address.
+<b>STEP 11</b> - Retrieving Linux Ubuntu VM Private IP Address On Azure.
 </p>
 <br />
 
@@ -148,7 +146,7 @@ ssh user@192.168.X.X
 <img src="https://imgur.com/gKrKVFt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<b>STEP 14</b> - Initiating a Perpetual Ping of Linux VM.
+<b>STEP 14</b> - Initiating a Perpetual Ping of Linux VM Using <b>10.0.0.5 -t</b>.
 </p>
 <br />
 
@@ -227,7 +225,7 @@ ssh user@192.168.X.X
 <img src="https://imgur.com/duXq8Xm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<b>STEP 24</b> - Switching To DC-1 PC To Create a DNS-A Record Named "mainframe" With DC-1's Private IP Address.
+<b>STEP 24</b> - Filtering For <b>DNS</b> Traffic.
 </p>
 <br />
 
@@ -235,7 +233,7 @@ ssh user@192.168.X.X
 <img src="https://imgur.com/faow4j8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<b>STEP 25</b> - Pinged "mainframe" Succesfully on CLIENT 1 PC.
+<b>STEP 25</b> - Entering <b>nslookup</b> Commmand In Powershell To Intiate DNS Traffic.
 </p>
 <br />
 
@@ -243,7 +241,7 @@ ssh user@192.168.X.X
 <img src="https://imgur.com/egWjE8X.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<b>STEP 26</b> - Changing "mainframe" IP Address To 8.8.8.8 ON DC-1 PC.
+<b>STEP 26</b> - Opened Up Web Browser & Entered IP Address <b>130.211.198.204</b>, But Connection To <B> disney.com</B> Failed.
 </p>
 <br />
 
@@ -251,59 +249,6 @@ ssh user@192.168.X.X
 <img src="https://imgur.com/TkPYyuw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-<b>STEP 27</b> - "mainframe" Still Pinging From 10.0.0.4 IP Despite IP Address Change.
+<b>STEP 27</b> - Using <b>tcp.port == 3389</b> To Initiate RDP Traffic.
 </p>
 <br />
-
-
-<p>
-<img src="https://imgur.com/TkPYyuw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-<b>STEP 28</b> - "mainframe" Still Holds A (Host) 10.0.0.4 When Initiating "ping" Command.
-</p>
-<br />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
