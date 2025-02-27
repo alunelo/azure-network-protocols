@@ -1,9 +1,9 @@
 <p align="center">
-<img src="https://imgur.com/UB1KIvZ.png" alt="Traffic Examination"/>
+<img src="https://imgur.com/436aG7m.png" alt="Traffic Examination"/>
 </p>
 
-<h1>Domain Name Server Configuration </h1>
-This project explores Domain Name System (DNS) management and analysis using PowerShell, CNAME records, and Windows Server Manager. The goal was to observe how DNS resolves domain names, analyze different record types, and use PowerShell commands to interact with DNS settings efficiently. <br />
+<h1> Wireshark & Network Protocols</h1> </h1>
+This project explores network traffic behavior by capturing and analyzing DNS, DHCP, RDP, and SSH packets using Wireshark. The focus is on understanding how these protocols operate, troubleshooting network connectivity, and leveraging PowerShell for network administration. Additionally, it covers initiating an SSH connection to a Linux VM using its private IP address from a Windows machine. <br />
 
 
 <h2>Environments and Technologies Used</h2>
@@ -11,7 +11,8 @@ This project explores Domain Name System (DNS) management and analysis using Pow
 - Microsoft Azure (Virtual Machines/Computer)
     - "CLIENT 1" (User PC) & "DC-1" (Domain Controller PC)
 - Remote Desktop
-- Domain Name Server
+- Wireshark
+- Linux VM (Ubuntu/Debian-based) – For SSH testing.
 - Powershell Terminal
 
 <h2>Operating Systems Used </h2>
@@ -19,16 +20,12 @@ This project explores Domain Name System (DNS) management and analysis using Pow
 - Windows 10 (21H2)
 
 <h2>Key Observations</h2>
-
+(WILL CHANGE THIS)
 - DNS Resolution Analysis – Used PowerShell to query and analyze how domain names resolve to IP addresses.
 - CNAME Record Configuration – Created and tested a CNAME record and pointed it to a web server.
 - DNS Server Management – Configured and monitored DNS services using Windows Server Manager.
 - PowerShell DNS Commands – Executed various commands such as flushdns, ping, & nslookup.
 
-<h2>DISCLAIMER</h2>
-
-- There was supposed to a screenshot after STEP 9 that showed the process of creating a CNAME called "search."
-- This CNAME was also configured to point to the URL of "www.google.com"
 
 <h2>Actions and Observations</h2>
 
