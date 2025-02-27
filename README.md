@@ -8,16 +8,16 @@ This project explores network traffic behavior by capturing and analyzing <b>DNS
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Computer)
-- Remote Desktop
-- Wireshark
-- Linux VM (Ubuntu/Debian-based) – For SSH testing.
-- Powershell Terminal
+- <b>Microsoft Azure</b> (Virtual Machines/Computer)
+- <b>Remote Desktop</b>
+- <b>Wireshark</b>
+- <b>Linux VM (Ubuntu/Debian-based)</b> – For SSH testing.
+- <b>Powershell Terminal</b>
 
 <h2>Operating Systems Used </h2>
 
-- Windows 10 (21H2)
-- Ubuntu Linux
+- <b>Windows 10</b> (21H2)
+- <b>Ubuntu Linux</b>
 
 <h2>Key Observations</h2>
 
