@@ -3,7 +3,7 @@
 </p>
 
 <h1>Domain Name Server Configuration </h1>
-This project explores the fundamental IT concepts behind VPN technology using Proton VPN. The primary objective was to observe how a VPN affects network behavior, including IP address changes, location masking, DNS resolution, and encrypted traffic. <br />
+This project explores Domain Name System (DNS) management and analysis using PowerShell, CNAME records, and Windows Server Manager. The goal was to observe how DNS resolves domain names, analyze different record types, and use PowerShell commands to interact with DNS settings efficiently. <br />
 
 
 <h2>Environments and Technologies Used</h2>
@@ -20,8 +20,10 @@ This project explores the fundamental IT concepts behind VPN technology using Pr
 
 <h2>Key Observations</h2>
 
-- IP Address Changes – Tracked how the public IP address changed when connecting to different Proton VPN servers worldwide.
-- Location Masking – Verified geolocation data before and after VPN connection to analyze how websites and services detect user location.
+- DNS Resolution Analysis – Used PowerShell to query and analyze how domain names resolve to IP addresses.
+- CNAME Record Configuration – Created and tested a CNAME record and pointed it to a web server.
+- DNS Server Management – Configured and monitored DNS services using Windows Server Manager.
+- PowerShell DNS Commands – Executed various commands such as flushdns, ping, & nslookup.
 
 <h2>DISCLAIMER</h2>
 
