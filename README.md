@@ -20,11 +20,26 @@ This project explores network traffic behavior by capturing and analyzing DNS, D
 - Windows 10 (21H2)
 
 <h2>Key Observations</h2>
-(WILL CHANGE THIS)
-- DNS Resolution Analysis – Used PowerShell to query and analyze how domain names resolve to IP addresses.
-- CNAME Record Configuration – Created and tested a CNAME record and pointed it to a web server.
-- DNS Server Management – Configured and monitored DNS services using Windows Server Manager.
-- PowerShell DNS Commands – Executed various commands such as flushdns, ping, & nslookup.
+
+- DNS Analysis
+    - Captured and analyzed DNS queries and responses using Wireshark.
+
+- DHCP Packet Inspection
+    - Observed the DORA (Discover, Offer, Request, Acknowledge) process for DHCP leases.
+    - Monitored DHCP-assigned IP addresses and renewal times.
+    - Used Get-DhcpServerv4Scope in PowerShell to check DHCP scope settings.
+- RDP Traffic Analysis
+    - Captured Remote Desktop Protocol (RDP) traffic between a Windows client and a remote server.
+
+- Examined encryption methods in RDP traffic.
+    - SSH Connection & Private IP Usage
+    - Initiated an SSH session from PowerShell to a Linux VM using its private IP address:
+ssh user@192.168.X.X
+
+- Analyzed SSH handshake and encryption methods in Wireshark.
+    - Captured ICMP, TCP, and UDP traffic for deeper insights.
+    - Observed HTTP vs. HTTPS traffic to analyze encrypted vs. unencrypted data.
+    - Used Test-NetConnection and ping to check network connectivity.
 
 
 <h2>Actions and Observations</h2>
@@ -115,6 +130,296 @@ STEP 10 - Pinged search CNAME Successfully.
 STEP 11 - "nslookup" Results for search CNAME.
 </p>
 <br />
+
+<p> 
+<img src="https://imgur.com/2ASqzhP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+STEP 1 - Attempting To Ping "mainframe" on CLIENT 1 PC
+<p>
+<br />
+
+<p>
+<img src="https://imgur.com/uuTOGup.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+STEP 2 - "nslookup" mainframe Attempt Fails on CLIENT 1 PC
+<p>
+<br />
+
+<p>
+<img src="https://imgur.com/wTlivcl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 3 - Switching To DC-1 PC To Create a DNS-A Record Named "mainframe" With DC-1's Private IP Address.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/SyYPi6a.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 4 - Pinged "mainframe" Succesfully on CLIENT 1 PC.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/2cvdip0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 5 - Changing "mainframe" IP Address To 8.8.8.8 ON DC-1 PC.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/GkXzhqv.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 6 - "mainframe" Still Pinging From 10.0.0.4 IP Despite IP Address Change.
+</p>
+<br />
+
+
+<p>
+<img src="https://imgur.com/XqyPjA8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 7 - "mainframe" Still Holds A (Host) 10.0.0.4 When Initiating "ping" Command.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/hCFM2av.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 8 - Initiated "flushdns" Command To Get Rid of The Cache on DC-1 PC.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/E5AQ6x8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+*STEP 9* - The Ping Is Now Showing The New 8.8.8.8 IP Address.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/2uj185b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 10 - Pinged search CNAME Successfully.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/7R0CRWg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 11 - "nslookup" Results for search CNAME.
+</p>
+<br />
+
+<p> 
+<img src="https://imgur.com/2ASqzhP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+STEP 1 - Attempting To Ping "mainframe" on CLIENT 1 PC
+<p>
+<br />
+
+<p>
+<img src="https://imgur.com/uuTOGup.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+STEP 2 - "nslookup" mainframe Attempt Fails on CLIENT 1 PC
+<p>
+<br />
+
+<p>
+<img src="https://imgur.com/wTlivcl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 3 - Switching To DC-1 PC To Create a DNS-A Record Named "mainframe" With DC-1's Private IP Address.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/SyYPi6a.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 4 - Pinged "mainframe" Succesfully on CLIENT 1 PC.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/2cvdip0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 5 - Changing "mainframe" IP Address To 8.8.8.8 ON DC-1 PC.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/GkXzhqv.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 6 - "mainframe" Still Pinging From 10.0.0.4 IP Despite IP Address Change.
+</p>
+<br />
+
+
+<p>
+<img src="https://imgur.com/XqyPjA8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 7 - "mainframe" Still Holds A (Host) 10.0.0.4 When Initiating "ping" Command.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/hCFM2av.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 8 - Initiated "flushdns" Command To Get Rid of The Cache on DC-1 PC.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/E5AQ6x8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+*STEP 9* - The Ping Is Now Showing The New 8.8.8.8 IP Address.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/2uj185b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 10 - Pinged search CNAME Successfully.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/7R0CRWg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 11 - "nslookup" Results for search CNAME.
+</p>
+<br />
+
+<p> 
+<img src="https://imgur.com/2ASqzhP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+STEP 1 - Attempting To Ping "mainframe" on CLIENT 1 PC
+<p>
+<br />
+
+<p>
+<img src="https://imgur.com/uuTOGup.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+STEP 2 - "nslookup" mainframe Attempt Fails on CLIENT 1 PC
+<p>
+<br />
+
+<p>
+<img src="https://imgur.com/wTlivcl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 3 - Switching To DC-1 PC To Create a DNS-A Record Named "mainframe" With DC-1's Private IP Address.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/SyYPi6a.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 4 - Pinged "mainframe" Succesfully on CLIENT 1 PC.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/2cvdip0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 5 - Changing "mainframe" IP Address To 8.8.8.8 ON DC-1 PC.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/GkXzhqv.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 6 - "mainframe" Still Pinging From 10.0.0.4 IP Despite IP Address Change.
+</p>
+<br />
+
+
+<p>
+<img src="https://imgur.com/XqyPjA8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 7 - "mainframe" Still Holds A (Host) 10.0.0.4 When Initiating "ping" Command.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/hCFM2av.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 8 - Initiated "flushdns" Command To Get Rid of The Cache on DC-1 PC.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/E5AQ6x8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+*STEP 9* - The Ping Is Now Showing The New 8.8.8.8 IP Address.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/2uj185b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 10 - Pinged search CNAME Successfully.
+</p>
+<br />
+
+<p>
+<img src="https://imgur.com/7R0CRWg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+STEP 11 - "nslookup" Results for search CNAME.
+</p>
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
